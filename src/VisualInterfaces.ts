@@ -25,7 +25,7 @@
  */
 
 module powerbi.extensibility.visual {
-    import SelectionId = powerbi.visuals.ISelectionId;
+    import ISelectionId = powerbi.visuals.ISelectionId;
     export interface ITooltipService {
         enabled(): boolean;
         show(options: TooltipShowOptions): void;
