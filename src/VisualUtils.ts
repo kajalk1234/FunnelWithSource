@@ -25,7 +25,7 @@
  */
 
 module powerbi.extensibility.visual {
-    import ValueFormatter = powerbi.extensibility.utils.formatting.valueFormatter;
+    import valueFormatter = powerbi.extensibility.utils.formatting.valueFormatter;
 
     export module VisualUtils {
         // tslint:disable-next-line:no-any
@@ -37,7 +37,7 @@ module powerbi.extensibility.visual {
             }
 
             // tslint:disable-next-line:no-any
-            return function (a: any, b: any): number {
+            return (a: any, b: any): number=> {
                 const result: number = (a[objProperty] < b[objProperty]) ? -1 : (a[objProperty] > b[objProperty]) ? 1 : 0;
 
                 return result * sortOrder;
@@ -104,7 +104,7 @@ module powerbi.extensibility.visual {
                 }
             }
 
-            const formatter: utils.formatting.IValueFormatter = ValueFormatter.create({
+            const formatter: utils.formatting.IValueFormatter = valueFormatter.create({
                 format: format,
                 value: formatterVal,
                 precision: decimalPlaces
